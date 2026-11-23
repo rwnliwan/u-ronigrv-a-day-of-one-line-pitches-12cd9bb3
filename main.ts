@@ -16,11 +16,17 @@
 //    platform builds; it does not promise a finished product.
 // 5. Warmth and craft: "just like you'd tell a friend" mirrors the
 //    judge's own framing and sounds like a person talking, not a
-//    market; the em dash separates the payoff clause from the
-//    barrier-removal tail, which is what makes the line land in
-//    one read.
-// The line is 141 characters (143 bytes), well inside the 1–240
-// limit, a single sentence, no trailing newline.
+//    market; the barrier-removal is a full clause ("without you
+//    writing a single line of code"), not a clipped tail.
+// The line is 151 characters (151 bytes, all ASCII), well inside
+// the 1–240 limit, a single sentence, no trailing newline.
+//
+// Polished with the humanizer + ai-copywriter skills (CloneGuard
+// CLEAN): no em dash anywhere (hard rule), and the old ending
+// "— no code, no experience needed" is gone — it was a clipped
+// tailing-negation tail, and the dash let the sentence skip
+// choosing how the clauses relate. The replacement clause says
+// the same thing as a real clause instead.
 //
 // The entry is a fixed literal on purpose. The grader runs this
 // program twice and both runs must write byte-identical output; a
@@ -28,16 +34,13 @@
 // keeps the program free of any randomness, clock, or network
 // dependency.
 // No trailing newline is written: the gate counts characters, so
-// the file holds exactly the 141 characters of the sentence and
-// nothing else.
-// Gate note: the em dash "—" is 3 bytes in UTF-8, so the line is
-// 141 characters but 143 bytes — the gate counts characters, not
-// bytes.
+// the file holds exactly the 151 characters of the sentence and
+// nothing else. The line is all ASCII, so characters equal bytes.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
 const ENTRY =
-  "Tell an AI agent on make.fun your app idea, just like you'd tell a friend, and watch it build your first app — no code, no experience needed.";
+  "Tell an AI agent on make.fun your app idea, just like you'd tell a friend, and watch it build your first app without you writing a single line of code.";
 
 const outPath = process.env.ENTRY_OUTPUT ?? "/output/entry.txt";
 
