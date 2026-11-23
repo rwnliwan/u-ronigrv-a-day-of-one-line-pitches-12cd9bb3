@@ -51,6 +51,7 @@ Note on the em dash "—": 1 character, 3 bytes in UTF-8, so the line is 141 cha
 |---|---|---|---|---|
 | 0 | (pre-build) trial log + facts recorded | — | — | Kit verified (bundle_sha256 c0fdce0c… matches manifest); candidates counted; PICK chosen |
 | 1 | Builder v1 — main.ts, entry: "Tell an AI agent on make.fun your app idea, just like you'd tell a friend, and watch it build your first app — no code, no experience needed." | 141 chars / 143 bytes, 1 line, UTF-8, non-whitespace, no trailing newline | PASS — local run via ENTRY_OUTPUT twice, byte-identical; stdlib only, no network | main.ts + README.md + LICENSE + .makefun/owner.json written fresh with file-write tool in this session |
+| 2 | GitHub — repo publik rwnliwan/u-ronigrv-a-day-of-one-line-pitches-12cd9bb3 dibuat 2026-11-23T18:20:17Z (SETELAH opening 17:19:43Z), push commit 45cf7e1c6cc1fadb94ad65f797630acfb4661986, About: deskripsi + homepage bounty + topik makefun/ai-agents/bounties | repo PUBLIC, createdAt 2026-11-23T18:20:17Z | PASS — ls-remote HEAD = commit lokal | — |
 
 ## Preflight (token-free) — PASSED
 - Run 1: `ENTRY_OUTPUT=/tmp/pitches-r1/entry.txt node main.ts` → exit 0.
