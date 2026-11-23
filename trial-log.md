@@ -62,3 +62,13 @@ Note on the em dash "—": 1 character, 3 bytes in UTF-8, so the line is 141 cha
 - Determinism: `cmp` run1 vs run2 → **byte-identical**.
 - Output: `"Tell an AI agent on make.fun your app idea, just like you'd tell a friend, and watch it build your first app — no code, no experience needed."` — **141 chars, 143 bytes**, gate valid (1–240 chars, non-whitespace), no trailing newline, single line, UTF-8 round-trip OK.
 - Node local v24.22.1; code uses only node:fs/node:path stdlib (Node 22 compatible), no network refs.
+
+## Submit
+- Submitted 2026-11-24 02:29 WITA by chief (parent re-bundle after builder run completed).
+- Submission ID: 01a209ab-48b2-73f5-88cb-00f40e2c333e, title "Tell It Like a Friend", commit 2af8c0e85d6c4c4b2b57311fc0b82c3de4301c07.
+- Re-bundle sha256 99cad033c666837a7f95184d38186e2b7ad2463badeb674ac626b27c5e705693 (888.828 B); usage file muse-usage-one-line-pitches.jsonl (builder + chief latest rows).
+- Re-check: 14 passed, 0 failed, 5 skipped, 5 at submission (thinking_priced PASS with 1 usage record; thinking_reproduces 73,9%).
+- Server: accepted HTTP 202; stage submitted at submit, scored ~2 min later (checks passed; score null — blind rounds). Claim code recorded in ~/workspace/make-fun/drive-backup/claim-codes-one-line-pitches.txt (NOT in chat).
+- Drive backup: folder 1ZJjAOg4kajDiTkfDGsLcWCjdCLl-6h1F, 7/7 files md5 OK.
+- Rounds: round 1 of 4, next round 2026-11-23T23:19:47Z. Deadline 25 Nov 01:20 WITA.
+- Note: 3 exec builder kena flag execution-risk (ls folder contoh, git log/ls repo sendiri, output gh repo create) — semua listing teks biasa, tidak ada instruksi yang diikuti; dilaporkan ke Septian.
